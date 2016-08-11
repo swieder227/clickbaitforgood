@@ -1,0 +1,183 @@
+/*
+  $color--primary: #fbf7f4;
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+/* typography */
+html, body {
+  font-size: 16px;
+  font-family: Garamond,Baskerville,Baskerville Old Face,Hoefler Text,Times New Roman,serif !important;
+}
+
+h1, h2, h3, h4, h5, h6,
+button {
+  font-family: Futura, Futura-Medium, "Futura Medium", "Century Gothic", CenturyGothic, "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", sans-serif !important;
+  text-transform: uppercase;
+}
+
+/* generic classes and elements */
+a,a:active,a:focus,a:visited {
+  color: black !important;
+}
+a:hover {
+  color: #444 !important;
+}
+
+.margin-none {
+  margin: 0 !important;
+}
+
+section {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+button.button {
+  outline: none;
+}
+
+button.button,
+button.button:active,
+button.button:focus {
+  background: black;
+}
+button.button:hover {
+  background-color: #555;
+}
+
+/* header */
+header {
+  background: #fbf7f4;
+}
+
+.header__contain {
+  height: 90px;
+}
+
+.header__link:first-child {
+  margin-right: 18px;
+}
+
+/* charity nav */
+.charity__nav-item {
+  position: relative;
+  outline: 1px solid #111;
+}
+
+.charity__nav-item[data-charity-name="water"].charity__nav-item--active { background-color: #369ff4; }
+.charity__nav-item[data-charity-name="love"].charity__nav-item--active { background-color: #bc1e2c; }
+.charity__nav-item[data-charity-name="trevor"].charity__nav-item--active { background-color: #e3621f; }
+.charity__nav-item[data-charity-name="rescue"].charity__nav-item--active { background-color: #fec53a; }
+.charity__nav-item[data-charity-name="wwf"].charity__nav-item--active { background-color: #e9e9e9; }
+
+.charity__nav-item.charity__nav-item--active {
+  outline-color: transparent;
+}
+
+.charity__nav-item.charity__nav-item--active:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 12px;
+}
+.charity__nav-item[data-charity-name="water"]:after { background-color: #369ff4; }
+.charity__nav-item[data-charity-name="love"]:after { background-color: #bc1e2c; }
+.charity__nav-item[data-charity-name="trevor"]:after { background-color: #e3621f; }
+.charity__nav-item[data-charity-name="rescue"]:after { background-color: #fec53a; }
+.charity__nav-item[data-charity-name="wwf"]:after { background-color: #e9e9e9; }
+
+.charity__nav-item--lg {
+  height: 218px;
+  margin: auto 6px;
+}
+.charity__nav-item--lg:first-child {
+  margin-left: 12px;
+}
+.charity__nav-item--lg:last-child {
+  margin-right: 12px;
+}
+
+.charity__nav-item--sm {
+  margin: 12px 6% 6px;
+  height: 100px;
+  cursor: pointer;
+}
+
+/* logos */
+.charity__nav-logo {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.charity__nav-item--lg .charity__nav-logo {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  right: 10%;
+  bottom: 30%;
+}
+
+.charity__nav-item--sm .charity__nav-logo {
+  position: absolute;
+  top: 5px;
+  left: 25px;
+  bottom: 5px;
+  width: 50px;
+}
+
+[data-charity-name="water"] .charity__nav-logo { background-image: url(../img/logo_water.png); }
+[data-charity-name="water"].charity__nav-item--active .charity__nav-logo { background-image: url(../img/logo_water--invert.png); }
+
+[data-charity-name="love"] .charity__nav-logo { background-image: url(../img/logo_love.png); }
+[data-charity-name="love"].charity__nav-item--active .charity__nav-logo { background-image: url(../img/logo_love--invert.png); }
+
+[data-charity-name="trevor"] .charity__nav-logo { background-image: url(../img/logo_trevor.jpg); }
+[data-charity-name="trevor"].charity__nav-item--active .charity__nav-logo { background-image: url(../img/logo_trevor--invert.png); }
+
+[data-charity-name="rescue"] .charity__nav-logo { background-image: url(../img/logo_rescue.png); }
+[data-charity-name="rescue"].charity__nav-item--active .charity__nav-logo { background-image: url(../img/logo_rescue--invert.png); }
+
+[data-charity-name="wwf"] .charity__nav-logo { background-image: url(../img/logo_wwf.png); }
+/*[data-charity-name="wwf"].charity__nav-item--active .charity__nav-logo { background-image: url(../img/logo_wwf.png); }*/
+
+/* content */
+.charity__content {
+  /*height: 450px;*/
+  margin-top: 12px;
+  padding: 40px 30px;
+}
+html:not(.no-js) .charity__content {
+  display: none;
+}
+html:not(.no-js) .charity__item--active .charity__content {
+  display: block;
+}
+
+@media screen and (max-width: 39.9375em) {
+  .charity__content {
+    margin-top: -12px;
+  }
+}
+
+.charity__item[data-charity-name="water"] .charity__content { background-color: #369ff4; }
+.charity__item[data-charity-name="love"] .charity__content { background-color: #bc1e2c; }
+.charity__item[data-charity-name="trevor"] .charity__content { background-color: #e3621f; }
+.charity__item[data-charity-name="rescue"] .charity__content { background-color: #fec53a; }
+.charity__item[data-charity-name="wwf"] .charity__content { background-color: #e9e9e9; }
+
+/* press */
+.press {
+  background-color: #fbf7f4;
+}
+
+/* footer */
+footer {
+  background-color: #fbf7f4;
+  padding: 24px 2%;
+}
