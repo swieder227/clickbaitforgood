@@ -59,7 +59,7 @@ var clickbait_app = {
   getShareContent: function(charity_name){
     var share_content = {};
 
-    share_content.href = "http://www.clickbaitforgood.org?charity="+charity_name
+    share_content.href = "http://www.clickbaitforgood.org?charity_name="+charity_name
 
     switch (charity_name) {
 
