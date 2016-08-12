@@ -1,6 +1,7 @@
 var clickbait_app = {
   init: function(){
     $("html").removeClass("no-js");
+    this.detectFormSubmit()
     this.detectSection();
     this.addEventHandlers();
   },
@@ -45,6 +46,12 @@ var clickbait_app = {
     var charity_name = this.getQueryVariable("charity_name");
     if(charity_name){
       this.setActiveCharity(charity_name);
+    }
+  },
+  detectFormSubmit: function(){
+    var submitted = this.getQueryVariable("submitted");
+    if(submitted){
+      $("form-submitted").removeClass("hide");
     }
   },
   getQueryVariable: function(variable) {

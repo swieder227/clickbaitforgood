@@ -213,7 +213,7 @@
             </div>
           </div>
         </section>
-        <!--section id="add">
+        <section id="add">
           <br>
           <div class="row">
             <div class="columns small-12 medium-6">
@@ -221,30 +221,30 @@
               <p>This project exists to promote worthwhile causes. If your charity is one of them, please submit fora chance to be featured.</p>
             </div>
             <div class="columns small-12 medium-6">
-              <form>
+              <form id="form-add-charity" action="php/mail.php" method="post">
                 <div class="row">
                   <div class="medium-6 columns">
                     <label>Name of Charity
-                      <input type="text">
+                      <input type="text" name="name">
                     </label>
                   </div>
                   <div class="medium-6 columns">
                     <label>Charity URL
-                      <input type="text">
+                      <input type="text" name="url">
                     </label>
                   </div>
                 </div>
                 <div class="row">
                   <div class="columns small-12">
                     <label>E-mail Address
-                      <input type="text">
+                      <input type="text" name="email">
                     </label>
                   </div>
                 </div>
                 <div class="row">
                   <div class="columns small-12">
                     <label>Phone Number
-                      <input type="text">
+                      <input type="text" name="phone">
                     </label>
                   </div>
                 </div>
@@ -252,15 +252,16 @@
                   <div class="columns small-12">
                     <label>
                       Short description and mission statement
-                      <textarea rows="5"></textarea>
+                      <textarea rows="5" name="description"></textarea>
                     </label>
                   </div>
                 </div>
-                <button class="button">Submit</button>
+                <button class="button" type="submit">Submit</button>
               </form>
+              <p class="form-submitted hide">Thanks for submitting your Charity!</p>
             </div>
           </div>
-        </section-->
+        </section>
 
         <!--section id="press" class="press">
           <div class="text-center">
