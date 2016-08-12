@@ -8,20 +8,62 @@ var clickbait_app = {
     $(".js-update-charity").on("click", function(){
       setActiveCharity(this.getAttribute("data-charity-name"))
     });
+
     $(".js-hover-update-charity").hover(function(){
       setActiveCharity(this.getAttribute("data-charity-name"))
     });
-    $(".js-share-href").on("click", function(e){
 
-      // share to fb
+    var getShareContent = this.getShareContent.bind(this);
+    $(".js-share-fb").on("click", function(event){
+      // if Facebook SDK is defined
       if(FB !== undefined){
+
+        // kill original anchor href
+        event.preventDefault();
+
+        // get share content
+        var charity_name = this.getAttribute("data-charity-name");
+        if(charity_name === "RAND"){
+          charity_name = "water";
+        }
+        var share_content = getShareContent(charity_name);
+
+        // FB.ui({
+        //   method: 'share',
+        //   href: share_content.href,
+        // }, function(response){});
+
         FB.ui({
           method: 'share',
-          href: 'https://developers.facebook.com/docs/',
+          link: 'clickbaitforgood.org',
+          caption: 'We’ve decided to turn it into something good and use clickbait to promote charities, support worthwhile causes and encourage donations.',
         }, function(response){});
       }
 
     })
+  },
+  getShareContent: function(charity_name){
+    var share_content = {};
+
+    share_content.href = "www.clickbaitforgood.org"
+
+    switch (charity_name) {
+
+      case "water":
+        break;
+      case "love":
+        break;
+      case "trevor":
+        break;
+      case "rescue":
+        break;
+      case "wwf":
+        break;
+      default:
+        //
+    }
+
+    return share_content;
   },
   setActiveCharity: function(charity_name){
     // update nav
