@@ -51,7 +51,7 @@ var clickbait_app = {
   detectFormSubmit: function(){
     var submitted = this.getQueryVariable("submitted");
     if(submitted){
-      $("form-submitted").removeClass("hide");
+      $(".form-submitted").removeClass("hide");
     }
   },
   getQueryVariable: function(variable) {

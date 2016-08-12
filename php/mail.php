@@ -6,7 +6,7 @@
   // echo $_POST['phone'];
   // echo $_POST['description'];
 
-  $to_address = "swieder227@gmail.com";
+  $to_address = "hello@rxmcreative.com";
   $subject = "New Clickbaitforgood Charity Form Submission";
 
   $mail_body .= "<table cellpadding='5' cellspacing='5'>";
@@ -22,7 +22,7 @@
   $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 
   // Additional headers
-  $headers .= 'To: swieder227@gmail.com'."\r\n";
+  $headers .= 'To: hello@rxmcreative.com'."\r\n";
   $headers .= 'From: info@clickbaitforgood.org' . "\r\n";
 
   mail ( $to_address , $subject , $mail_body, $headers );
