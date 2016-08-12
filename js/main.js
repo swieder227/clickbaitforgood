@@ -1,6 +1,7 @@
 var clickbait_app = {
   init: function(){
     $("html").removeClass("no-js");
+    this.detectSection();
     this.addEventHandlers();
   },
   addEventHandlers: function(){
@@ -40,40 +41,55 @@ var clickbait_app = {
 
     })
   },
+  detectSection: function(){
+    var charity_name = this.getQueryVariable("charity_name");
+    if(charity_name){
+      this.setActiveCharity(charity_name);
+    }
+  },
+  getQueryVariable: function(variable) {
+     var query = window.location.search.substring(1);
+     var vars = query.split("&");
+     for (var i=0;i<vars.length;i++) {
+             var pair = vars[i].split("=");
+             if(pair[0] == variable){return pair[1];}
+     }
+     return(false);
+  },
   getShareContent: function(charity_name){
     var share_content = {};
 
-    share_content.href = "www.clickbaitforgood.org?charity="+charity_name
+    share_content.href = "http://www.clickbaitforgood.org?charity="+charity_name
 
     switch (charity_name) {
 
       case "water":
         share_content.title = "This guy’s monthly bill will shock you!";
         share_content.description = "This is how much will cost to...";
-        share_content.img = "clickbaitforgood.org/img/share_water.jpeg";
+        share_content.img = "http://www.clickbaitforgood.org/img/share_water.jpeg";
 
         break;
       case "love":
         share_content.title = "She fell for Mr. Perfect.";
         share_content.description = "You won’t believe what happened next.";
-        share_content.img = "clickbaitforgood.org/img/share_love.jpg";
+        share_content.img = "http://www.clickbaitforgood.org/img/share_love.jpg";
 
         break;
       case "rescue":
         share_content.title = "Outrageous!";
         share_content.description = "You won’t believe the size of this guy’s boat.";
-        share_content.img = "clickbaitforgood.org/img/share_rescue.jpg";
+        share_content.img = "http://www.clickbaitforgood.org/img/share_rescue.jpg";
 
         break;
       case "trevor":
         share_content.title = "Shocking final words that will haunt you.";
         share_content.description = "They will never accept...";
-        share_content.img = "clickbaitforgood.org/img/share_trevor.jpg";
+        share_content.img = "http://www.clickbaitforgood.org/img/share_trevor.jpg";
         break;
       case "wwf":
         share_content.title = "This guy turned his cat into a rug.";
         share_content.description = "This is NOT what we expect from a pet owner.";
-        share_content.img = "clickbaitforgood.org/img/share_wwf.jpg";
+        share_content.img = "http://www.clickbaitforgood.org/img/share_wwf.jpg";
 
         break;
       default:
