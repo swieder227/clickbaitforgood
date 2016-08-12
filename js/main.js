@@ -28,15 +28,13 @@ var clickbait_app = {
         }
         var share_content = getShareContent(charity_name);
 
-        // FB.ui({
-        //   method: 'share',
-        //   href: share_content.href,
-        // }, function(response){});
-
         FB.ui({
           method: 'share',
-          link: 'clickbaitforgood.org',
-          caption: 'We’ve decided to turn it into something good and use clickbait to promote charities, support worthwhile causes and encourage donations.',
+          href: 'clickbaitforgood.org',
+          picture: "clickbaitforgood.org/img/share_love.jpg",
+          title: "custom title",
+          description: "custom description",
+          caption: "custom caption"
         }, function(response){});
       }
 
