@@ -22,18 +22,46 @@
 
         <header>
           <div class="header__contain row align-spaced align-middle">
-            <div class="columns small-4">
+            <div class="columns large-4 show-for-large">
               <a class="header__link" href="#add"><button>ADD YOUR CHARITY</button></a>
-              <a class="header__link" href="#press"><button>PRESS</button></a>
+              <!--a class="header__link" href="#press"><button>PRESS</button></a-->
             </div>
-            <div class="columns text-center small-4">
-              <img src="" alt="Clickbait For Good">
+            <div class="columns text-center small-4 large-4">
+              <img class="header__logo" src="img/logo_clickbait.gif" alt="Clickbait For Good">
             </div>
-            <div class="columns small-4">
+            <div class="columns small-8 large-4">
               <div class="row align-middle align-right small-collapse">
-                <div class="columns shrink"><button>TW</button></div>
-                <div class="columns shrink"><button>FB</button></div>
-                <div class="columns shrink"><button class="button margin-none js-share-href">SHARE FOR GOOD</button></div>
+                <a href="https://twitter.com/clickbait4good" target="_blank" class="columns shrink social-icon social-icon--1">
+                  <button>
+                      <svg version="1.1" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 512.002 512.002" style="enable-background:new 0 0 512.002 512.002;">
+                        <g>
+                          <path d="M512.002,97.211c-18.84,8.354-39.082,14.001-60.33,16.54c21.686-13,38.342-33.585,46.186-58.115
+                            c-20.299,12.039-42.777,20.78-66.705,25.49c-19.16-20.415-46.461-33.17-76.674-33.17c-58.011,0-105.042,47.029-105.042,105.039
+                            c0,8.233,0.929,16.25,2.72,23.939c-87.3-4.382-164.701-46.2-216.509-109.753c-9.042,15.514-14.223,33.558-14.223,52.809
+                            c0,36.444,18.544,68.596,46.73,87.433c-17.219-0.546-33.416-5.271-47.577-13.139c-0.01,0.438-0.01,0.878-0.01,1.321
+                            c0,50.894,36.209,93.348,84.261,103c-8.813,2.399-18.094,3.687-27.674,3.687c-6.769,0-13.349-0.66-19.764-1.888
+                            c13.368,41.73,52.16,72.104,98.126,72.949c-35.95,28.176-81.243,44.967-130.458,44.967c-8.479,0-16.84-0.496-25.058-1.471
+                            c46.486,29.807,101.701,47.197,161.021,47.197c193.211,0,298.868-160.062,298.868-298.872c0-4.554-0.104-9.084-0.305-13.59
+                            C480.111,136.775,497.92,118.275,512.002,97.211z"/>
+                        </g>
+                      </svg>
+                  </button>
+                </a>
+                <a href="https://www.facebook.com/clickbaitforgood/" target="_blank" class="columns shrink social-icon social-icon--2">
+                  <button>
+                    <svg x="0px" y="0px" width="100%" height="100%" viewBox="0 0 96.124 96.123" style="enable-background:new 0 0 96.124 96.123;">
+                      <g>
+                        <path d="M72.089,0.02L59.624,0C45.62,0,36.57,9.285,36.57,23.656v10.907H24.037c-1.083,0-1.96,0.878-1.96,1.961v15.803
+                          c0,1.083,0.878,1.96,1.96,1.96h12.533v39.876c0,1.083,0.877,1.96,1.96,1.96h16.352c1.083,0,1.96-0.878,1.96-1.96V54.287h14.654
+                          c1.083,0,1.96-0.877,1.96-1.96l0.006-15.803c0-0.52-0.207-1.018-0.574-1.386c-0.367-0.368-0.867-0.575-1.387-0.575H56.842v-9.246
+                          c0-4.444,1.059-6.7,6.848-6.7l8.397-0.003c1.082,0,1.959-0.878,1.959-1.96V1.98C74.046,0.899,73.17,0.022,72.089,0.02z"/>
+                      </g>
+                    </svg>
+                  </button>
+                </a>
+                <div class="columns shrink">
+                  <button class="button margin-none header__right-button js-share-href">SHARE FOR GOOD</button>
+                </div>
               </div>
             </div>
           </div>
@@ -54,19 +82,19 @@
           <div class="charity">
 
             <div class="row hide-for-small-only">
-              <button class="columns expand charity__nav-item charity__nav-item--lg js-update-charity" data-charity-name="water">
+              <button class="columns expand charity__nav-item charity__nav-item--lg js-hover-update-charity" data-charity-name="water">
                 <div class="charity__nav-logo"></div>
               </button>
-              <button class="columns expand charity__nav-item charity__nav-item--lg js-update-charity" data-charity-name="love">
+              <button class="columns expand charity__nav-item charity__nav-item--lg js-hover-update-charity" data-charity-name="love">
                 <div class="charity__nav-logo"></div>
               </button>
-              <button class="columns expand charity__nav-item charity__nav-item--lg js-update-charity" data-charity-name="trevor">
+              <button class="columns expand charity__nav-item charity__nav-item--lg js-hover-update-charity" data-charity-name="trevor">
                 <div class="charity__nav-logo"></div>
               </button>
-              <button class="columns expand charity__nav-item charity__nav-item--lg js-update-charity" data-charity-name="rescue">
+              <button class="columns expand charity__nav-item charity__nav-item--lg js-hover-update-charity" data-charity-name="rescue">
                 <div class="charity__nav-logo"></div>
               </button>
-              <button class="columns expand charity__nav-item charity__nav-item--lg js-update-charity" data-charity-name="wwf">
+              <button class="columns expand charity__nav-item charity__nav-item--lg js-hover-update-charity" data-charity-name="wwf">
                 <div class="charity__nav-logo"></div>
               </button>
             </div>
@@ -81,10 +109,11 @@
                     <img src="img/bg_water.jpg" alt="">
                   </div>
                   <div class="columns small-12 medium-6">
+                    <br class="show-for-small-only">
                     <h5>This guy’s monthly bill will shock you!</h5>
                     <p>For $30 you can hardly get a gym membership in the city. You can however bring clean water to a person in need, for a month. Help Charity Water continue their mission.</p>
-                    <div class="button-group">
-                      <button class="button">Donate Now</button>
+                    <div class="button-contain">
+                      <button class="button button--yellow">Get Involved</button>
                       <button class="button">Share for Good</button>
                     </div>
                   </div>
@@ -101,10 +130,11 @@
                     <img src="img/bg_love.jpg" alt="">
                   </div>
                   <div class="columns small-12 medium-6">
+                    <br class="show-for-small-only">
                     <h5>She fell for Mr. Perfect. You won’t believe what happened next.</h5>
                     <p>In most cases of human trafficking, women are being seducedand then betrayed by their perpetrators. Love 146 is a non-profitorganization fighting to change that.</p>
-                    <div class="button-group">
-                      <button class="button">Donate Now</button>
+                    <div class="button-contain">
+                      <button class="button">Get Involved</button>
                       <button class="button">Share for Good</button>
                     </div>
                   </div>
@@ -121,10 +151,11 @@
                     <img src="img/bg_trevor.jpg" alt="">
                   </div>
                   <div class="columns small-12 medium-6">
+                    <br class="show-for-small-only">
                     <h5>Shocking final words that will haunt you.</h5>
                     <p>‘They will never accepted me for who I am’. Most suicidecases among LGBTQ youth are caused by lack of supportand acceptance. The Trevor Project is providing mental healthresources and a supportive environment to prevent that.</p>
-                    <div class="button-group">
-                      <button class="button">Donate Now</button>
+                    <div class="button-contain">
+                      <button class="button button--orange">Get Involved</button>
                       <button class="button">Share for Good</button>
                     </div>
                   </div>
@@ -141,10 +172,11 @@
                     <img src="img/bg_rescue.jpg" alt="">
                   </div>
                   <div class="columns small-12 medium-6">
+                    <br class="show-for-small-only">
                     <h5>Outrageous! You won’t believe the size of this guy’s boat.</h5>
                     <p>Thousands of refugees are crossing dangerous waters inundersized boats to flee conflict areas they once calledtheir homes. More than a millionaire’s yacht, this is whatwe should care and talk about.</p>
-                    <div class="button-group">
-                      <button class="button">Donate Now</button>
+                    <div class="button-contain">
+                      <button class="button button--white">Get Involved</button>
                       <button class="button">Share for Good</button>
                     </div>
                   </div>
@@ -161,10 +193,11 @@
                     <img src="img/bg_wwf.jpg" alt="">
                   </div>
                   <div class="columns small-12 medium-6">
+                    <br class="show-for-small-only">
                     <h5>This guy turned his cat into a rug.</h5>
                     <p>The wild tiger is one of the most gracious felines in the world. Unfortunately, they are relentlessly poached, parts of their bodiesbeing used for medicine, folk remedies, and expensive rugs. Help WWF put an end to this.</p>
-                    <div class="button-group">
-                      <button class="button">Donate Now</button>
+                    <div class="button-contain">
+                      <button class="button button--orange">Get Involved</button>
                       <button class="button">Share for Good</button>
                     </div>
                   </div>
@@ -174,6 +207,7 @@
           </div>
         </section>
         <section id="add">
+          <br>
           <div class="row">
             <div class="columns small-12 medium-6">
               <h5>Add your Charity</h5>
@@ -221,17 +255,17 @@
           </div>
         </section>
 
-        <section id="press" class="press">
+        <!--section id="press" class="press">
           <div class="text-center">
             <h5>Press</h5>
           </div>
         </section>
 
-        <br>
+        <br-->
 
         <footer class="text-center">
-          <p>www.clickbaitforgood.org is an independent project by RXM Creative in partnership with Andoscia Communications.</p>
-          <p class="margin-none">Contact us: info@clickbaitforgood.org</p>
+          <p>www.clickbaitforgood.org is an independent project by <a href="www.rxmcreative.com" target="_blank">RXM Creative</a> in partnership with <a href="http://www.andosciacommunications.com/" target="_blank">Andoscia Communications</a>.</p>
+          <p class="margin-none">Contact us: <a href="mailto:info@clickbaitforgood.org">info@clickbaitforgood.org</a></p>
         </footer>
 
         <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>

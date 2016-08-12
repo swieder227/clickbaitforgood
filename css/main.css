@@ -31,10 +31,11 @@ a:hover {
 }
 
 section {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 
+/* buttons */
 button.button {
   outline: none;
 }
@@ -43,9 +44,46 @@ button.button,
 button.button:active,
 button.button:focus {
   background: black;
+  text-transform: uppercase;
 }
 button.button:hover {
   background-color: #555;
+}
+
+button.button.button--orange,
+button.button.button--orange:active,
+button.button.button--orange:focus {
+  background: #fba446;
+}
+button.button.button--orange:hover {
+  background: #ec7a3b;
+}
+
+button.button.button--white,
+button.button.button--white:active,
+button.button.button--white:focus {
+  background: #fff;
+  color: #000 !important;
+}
+button.button.button--white:hover {
+  background: #ddd;
+}
+
+button.button.button--yellow,
+button.button.button--yellow:active,
+button.button.button--yellow:focus {
+  background: #fdcb06;
+  color: #000 !important;
+}
+button.button.button--yellow:hover {
+  background: #c5a93d
+  ;
+}
+
+
+
+.button-contain button.button {
+  margin-right: 20px;
 }
 
 /* header */
@@ -60,6 +98,22 @@ header {
 .header__link:first-child {
   margin-right: 18px;
 }
+
+.header__logo {
+  max-height: 70px;
+}
+
+.button.header__right-button {
+  margin-right: 10px !important;
+}
+
+@media screen and (max-width: 39.9375em) {
+  .button.header__right-button {
+    font-size: 0.6rem;
+  }
+}
+
+
 
 /* charity nav */
 .charity__nav-item {
@@ -103,7 +157,7 @@ header {
 }
 
 .charity__nav-item--sm {
-  margin: 12px 6% 6px;
+  margin: 5px 2px;
   height: 100px;
   cursor: pointer;
 }
@@ -125,10 +179,10 @@ header {
 
 .charity__nav-item--sm .charity__nav-logo {
   position: absolute;
-  top: 5px;
-  left: 25px;
-  bottom: 5px;
-  width: 50px;
+  top: 10px;
+  left: 33%;
+  bottom: 10px;
+  right: 33%;
 }
 
 [data-charity-name="water"] .charity__nav-logo { background-image: url(../img/logo_water.png); }
@@ -162,6 +216,8 @@ html:not(.no-js) .charity__item--active .charity__content {
 @media screen and (max-width: 39.9375em) {
   .charity__content {
     margin-top: -12px;
+    margin-left: 2px;
+    margin-right: 2px;
   }
 }
 
@@ -180,4 +236,25 @@ html:not(.no-js) .charity__item--active .charity__content {
 footer {
   background-color: #fbf7f4;
   padding: 24px 2%;
+}
+
+footer p,
+footer a {
+  color: #7e7c7b !important;
+  font-family: Futura, Futura-Medium, "Futura Medium", "Century Gothic", CenturyGothic, "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", sans-serif !important;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* social-icon */
+.social-icon {
+  width: 20px;
+  height: 20px;
+  margin: 0 10px;
+  fill: #706e67;
+}
+
+.social-icon--2 {
+  margin-right: 20px;
 }

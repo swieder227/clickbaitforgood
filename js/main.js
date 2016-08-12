@@ -8,6 +8,9 @@ var clickbait_app = {
     $(".js-update-charity").on("click", function(){
       setActiveCharity(this.getAttribute("data-charity-name"))
     });
+    $(".js-hover-update-charity").hover(function(){
+      setActiveCharity(this.getAttribute("data-charity-name"))
+    });
     $(".js-share-href").on("click", function(e){
 
       // share to fb
