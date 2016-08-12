@@ -30,9 +30,9 @@ var clickbait_app = {
 
         FB.ui({
           method: 'share',
-          href: 'clickbaitforgood.org',
-          picture: "clickbaitforgood.org/img/share_love.jpg",
-          title: "custom title",
+          href: share_content.href,
+          picture: share_content.img,
+          title: share_content.title,
           caption: "clickbaitforgood.org"
         }, function(response){});
       }
