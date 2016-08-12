@@ -33,8 +33,7 @@ var clickbait_app = {
           href: 'clickbaitforgood.org',
           picture: "clickbaitforgood.org/img/share_love.jpg",
           title: "custom title",
-          description: "custom description",
-          caption: "custom caption"
+          caption: "clickbaitforgood.org"
         }, function(response){});
       }
 
@@ -43,19 +42,29 @@ var clickbait_app = {
   getShareContent: function(charity_name){
     var share_content = {};
 
-    share_content.href = "www.clickbaitforgood.org"
+    share_content.href = "www.clickbaitforgood.org?charity="+charity_name
 
     switch (charity_name) {
 
       case "water":
+        share_content.title = "This guy’s monthly bill will shock you!";
+        share_content.img = "clickbaitforgood.org/img/share_water.jpg";
         break;
       case "love":
+        share_content.title = "She fell for Mr. Perfect. You won’t believe what happened next.";
+        share_content.img = "clickbaitforgood.org/img/share_love.jpg";
         break;
       case "trevor":
+        share_content.title = "Outrageous! You won’t believe the size of this guy’s boat.";
+        share_content.img = "clickbaitforgood.org/img/share_trevor.jpg";
         break;
       case "rescue":
+        share_content.title = "Shocking final words that will haunt you.";
+        share_content.img = "clickbaitforgood.org/img/share_rescue.jpg";
         break;
       case "wwf":
+        share_content.title = "This guy turned his cat into a rug.";
+        share_content.img = "clickbaitforgood.org/img/share_wwf.jpg";
         break;
       default:
         //
