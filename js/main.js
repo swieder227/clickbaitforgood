@@ -40,7 +40,9 @@ var clickbait_app = {
         }, function(response){});
       }
 
-    })
+    });
+
+    $("form#form-add-charity").on("submit", this.submitForm.bind(this));
   },
   detectSection: function(){
     var charity_name = this.getQueryVariable("charity_name");
@@ -113,6 +115,30 @@ var clickbait_app = {
     // update content
     $(".charity__item").removeClass("charity__item--active");
     $(".charity__item[data-charity-name='"+charity_name+"']").addClass("charity__item--active");
+  },
+  submitForm: function(e){
+     e.preventDefault();
+
+     $(".form-submitted-btn").attr("disabled", true)
+
+     $.ajax({
+        type: 'POST',
+        url: 'php/mail.php',
+        data: $("form#form-add-charity").serialize(),
+        success: function (response) {
+          if(JSON.parse(response).type === "success"){
+            $(".form-submitted").removeClass("hide");
+          } else {
+            $(".form-error").removeClass("hide");
+          }
+        },
+        error: function(){
+          $(".form-error").removeClass("hide");
+        },
+        complete: function(){
+          $(".form-submitted-btn").attr("disabled", false);
+        }
+      });
   }
 }
 
