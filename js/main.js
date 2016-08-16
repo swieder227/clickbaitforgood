@@ -107,22 +107,22 @@ var clickbait_app = {
       case "milk":
         share_content.title = "The ONE thing you need to know about drinking milk.";
         share_content.description = "It has to be seen to be believed. But you still won't believe it.";
-        share_content.img = "http://www.clickbaitforgood.org/img/share_love.jpg";
+        share_content.img = "http://www.clickbaitforgood.org/img/share_milk.jpg";
         break;
       case "hair":
         share_content.title = "This famous hairstylist has ONE little trick.";
         share_content.description = "You would never guess what can be done.";
-        share_content.img = "http://www.clickbaitforgood.org/img/share_rescue.jpg";
+        share_content.img = "http://www.clickbaitforgood.org/img/share_hair.jpg";
         break;
       case "elton":
         share_content.title = "This is NOT what we expect Elton John to do after his show";
         share_content.description = "You won't believe where he went.";
-        share_content.img = "http://www.clickbaitforgood.org/img/share_trevor.jpg";
+        share_content.img = "http://www.clickbaitforgood.org/img/share_elton.jpg";
         break;
       case "cat":
         share_content.title = "This guy turned his cat into a rug.";
         share_content.description = "This is NOT what we expect from a pet owner.";
-        share_content.img = "http://www.clickbaitforgood.org/img/share_wwf.jpg";
+        share_content.img = "http://www.clickbaitforgood.org/img/share_cat.jpg";
         break;
       default:
         //
