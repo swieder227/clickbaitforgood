@@ -76,8 +76,17 @@ button.button.button--yellow:focus {
   color: #000 !important;
 }
 button.button.button--yellow:hover {
-  background: #c5a93d
-  ;
+  background: #c5a93d;
+}
+
+button.button.button--gray,
+button.button.button--gray:active,
+button.button.button--gray:focus {
+  background: #4b4a4a;
+  color: #fff !important;
+}
+button.button.button--gray:hover {
+  background: #616060;
 }
 
 
@@ -156,6 +165,10 @@ header {
   margin-right: 12px;
 }
 
+.charity__nav-item--lg:not(.charity__nav-item--active):hover {
+  box-shadow: 0 0 5px #828282;
+}
+
 .charity__nav-item--sm {
   margin: 5px 2px;
   height: 100px;
@@ -226,6 +239,16 @@ html:not(.no-js) .charity__item--active .charity__content {
 .charity__item[data-charity-name="trevor"] .charity__content { background-color: #e3621f; }
 .charity__item[data-charity-name="rescue"] .charity__content { background-color: #fec53a; }
 .charity__item[data-charity-name="wwf"] .charity__content { background-color: #e9e9e9; }
+
+/* shared */
+.shared {
+  background-color: #fbf7f4;
+}
+.slick-arrow:before,
+.slick-arrow:after {
+  color: #706e67 !important;
+}
+
 
 /* press */
 .press {

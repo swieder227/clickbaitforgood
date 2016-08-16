@@ -4,6 +4,7 @@ var clickbait_app = {
     this.detectFormSubmit()
     this.detectSection();
     this.addEventHandlers();
+    this.setupSlickCarousel();
   },
   addEventHandlers: function(){
     var setActiveCharity = this.setActiveCharity.bind(this);
@@ -11,7 +12,7 @@ var clickbait_app = {
       setActiveCharity(this.getAttribute("data-charity-name"))
     });
 
-    $(".js-hover-update-charity").hover(function(){
+    $(".js-hover-update-charity").on("click", function(){
       setActiveCharity(this.getAttribute("data-charity-name"))
     });
 
@@ -43,6 +44,12 @@ var clickbait_app = {
     });
 
     $("form#form-add-charity").on("submit", this.submitForm.bind(this));
+  },
+  setupSlickCarousel: function(){
+    $('.shared-carousel').slick({
+      arrows: true,
+      dots: true
+    });
   },
   detectSection: function(){
     var charity_name = this.getQueryVariable("charity_name");
@@ -76,19 +83,16 @@ var clickbait_app = {
         share_content.title = "This guy’s monthly bill will shock you!";
         share_content.description = "This is how much will cost to...";
         share_content.img = "http://www.clickbaitforgood.org/img/share_water.jpeg";
-
         break;
       case "love":
         share_content.title = "She fell for Mr. Perfect.";
         share_content.description = "You won’t believe what happened next.";
         share_content.img = "http://www.clickbaitforgood.org/img/share_love.jpg";
-
         break;
       case "rescue":
         share_content.title = "Outrageous!";
         share_content.description = "You won’t believe the size of this guy’s boat.";
         share_content.img = "http://www.clickbaitforgood.org/img/share_rescue.jpg";
-
         break;
       case "trevor":
         share_content.title = "Shocking final words that will haunt you.";
@@ -99,7 +103,26 @@ var clickbait_app = {
         share_content.title = "This guy turned his cat into a rug.";
         share_content.description = "This is NOT what we expect from a pet owner.";
         share_content.img = "http://www.clickbaitforgood.org/img/share_wwf.jpg";
-
+        break;
+      case "milk":
+        share_content.title = "The ONE thing you need to know about drinking milk.";
+        share_content.description = "It has to be seen to be believed. But you still won't believe it.";
+        share_content.img = "http://www.clickbaitforgood.org/img/share_love.jpg";
+        break;
+      case "hair":
+        share_content.title = "This famous hairstylist has ONE little trick.";
+        share_content.description = "You would never guess what can be done.";
+        share_content.img = "http://www.clickbaitforgood.org/img/share_rescue.jpg";
+        break;
+      case "elton":
+        share_content.title = "This is NOT what we expect Elton John to do after his show";
+        share_content.description = "You won't believe where he went.";
+        share_content.img = "http://www.clickbaitforgood.org/img/share_trevor.jpg";
+        break;
+      case "cat":
+        share_content.title = "This guy turned his cat into a rug.";
+        share_content.description = "This is NOT what we expect from a pet owner.";
+        share_content.img = "http://www.clickbaitforgood.org/img/share_wwf.jpg";
         break;
       default:
         //
