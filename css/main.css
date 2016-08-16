@@ -264,6 +264,16 @@ html:not(.no-js) .charity__item--active .charity__content {
   color: #706e67 !important;
 }
 
+@media (min-width: 768px) {
+  .slick-next {
+      right: -50px;
+  }
+  .slick-prev {
+      left: -50px;
+  }
+}
+
+
 
 /* press */
 .press {
