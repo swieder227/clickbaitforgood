@@ -7,15 +7,30 @@
 }
 
 /* typography */
-html, body {
-  font-size: 16px;
+html, body, h1, h2 {
   font-family: Garamond,Baskerville,Baskerville Old Face,Hoefler Text,Times New Roman,serif !important;
 }
 
-h1, h2, h3, h4, h5, h6,
+html, body {
+  font-size: 16px;
+}
+
+h3, h4, h5, h6,
 button {
   font-family: Futura, Futura-Medium, "Futura Medium", "Century Gothic", CenturyGothic, "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", sans-serif !important;
   text-transform: uppercase;
+}
+
+h1, h2 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 1.4rem;
+}
+
+h2 {
+  font-size: 1.1rem;
 }
 
 /* generic classes and elements */
@@ -261,8 +276,8 @@ footer {
   padding: 24px 2%;
 }
 
-footer p,
-footer a {
+footer.footer p,
+footer.footer a, footer.footer a:active, footer.footer a:focus, footer.footer a:visited {
   color: #7e7c7b !important;
   font-family: Futura, Futura-Medium, "Futura Medium", "Century Gothic", CenturyGothic, "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", sans-serif !important;
 }
