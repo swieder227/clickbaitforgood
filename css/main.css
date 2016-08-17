@@ -53,6 +53,10 @@ section {
   margin-bottom: 24px;
 }
 
+.section__header {
+  padding: 8px 0;
+}
+
 /* buttons */
 button.button {
   outline: none;
