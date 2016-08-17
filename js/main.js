@@ -48,7 +48,9 @@ var clickbait_app = {
   setupSlickCarousel: function(){
     $('.shared-carousel').slick({
       arrows: true,
-      dots: true
+      dots: true,
+      autoplay: true,
+      autoplaySpeed: 5000
     });
   },
   detectSection: function(){
