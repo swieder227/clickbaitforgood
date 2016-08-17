@@ -44,6 +44,9 @@ a:hover {
 .margin-none {
   margin: 0 !important;
 }
+.maxw-none {
+  max-width: none !important;
+}
 
 section {
   margin-top: 24px;
