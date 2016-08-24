@@ -126,6 +126,26 @@ var clickbait_app = {
         share_content.description = "This is NOT what we expect from a pet owner.";
         share_content.img = "http://www.clickbaitforgood.org/img/share_cat.jpg";
         break;
+      case "pedal":
+        share_content.title = "Can bikes make you smarter";
+        share_content.description = "2 reasons why biking can make you more successful";
+        share_content.img = "http://www.clickbaitforgood.org/img/share_pedal.jpg";
+        break;
+      case "lemon":
+        share_content.title = "Whoa.... HOW this eight-year-old made her first 1 Million Dollars.";
+        share_content.description = "What's the secret?";
+        share_content.img = "http://www.clickbaitforgood.org/img/share_lemon.jpg";
+        break;
+      case "dallas":
+        share_content.title = "You won’t believe it!";
+        share_content.description = "This is what they found when they opened the door of an abandoned hotel!";
+        share_content.img = "http://www.clickbaitforgood.org/img/share_dallas.jpg";
+        break;
+      case "hunger":
+        share_content.title = "5 things this food delivery service got right.";
+        share_content.description = "This is how they did it...";
+        share_content.img = "http://www.clickbaitforgood.org/img/share_hunger.jpg";
+        break;
       default:
         //
     }
