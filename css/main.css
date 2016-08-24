@@ -53,8 +53,14 @@ a:hover {
 }
 
 section {
-  margin-top: 24px;
-  margin-bottom: 24px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.section__header {
+  padding: 8px 0;
 }
 
 /* buttons */
@@ -316,6 +322,15 @@ html:not(.no-js) .charity__item--active .charity__content {
   background-color: #fbf7f4;
 }
 
+/* press-cta */
+.press-cta {
+  padding: 20px;
+}
+.press-cta__button {
+  margin: 20px;
+}
+
+
 /* footer */
 footer {
   background-color: #fbf7f4;
@@ -341,4 +356,9 @@ footer a:hover {
 
 .social-icon--2 {
   margin-right: 20px;
+}
+
+/* fb feed */
+.fb-feed {
+  padding: 0 10%;
 }
